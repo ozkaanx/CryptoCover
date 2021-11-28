@@ -30,7 +30,7 @@ function Newsletter() {
     <div className="col-right">
       {(firts7Articles.length <= 0 && <div>Loading...</div>) ||
         firts7Articles.map((item, _index) => (
-          <a key={_index} href={item.url} target="_blank">
+          <a key={_index} href={item.url}>
             <p>{item.title} </p>
           </a>
         ))}
