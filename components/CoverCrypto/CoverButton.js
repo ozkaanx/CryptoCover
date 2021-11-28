@@ -9,7 +9,7 @@ function CoverButton(props) {
   async function convert() {
     await axios
       .get(
-        `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${firstCurrency}&to_currency=${lastCurrency}&apikey=${process.env.NEXT_RAPID_API_KEY}`
+        `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${firstCurrency}&to_currency=${lastCurrency}&apikey=c879f93668msh38effe36525dc4dp181186jsn1653c4bf345f`
       )
       .then((response) => {
         props.setResult(

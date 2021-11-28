@@ -28,11 +28,12 @@ function Newsletter() {
   const firts7Articles = articles?.slice(0, 7);
   return (
     <div className="col-right">
-      {firts7Articles.map((item, _index) => (
-        <a key={_index} href={item.url} target="_blank">
-          <p>{item.title} </p>
-        </a>
-      ))}
+      {(firts7Articles.length <= 0 && <div>Loading...</div>) ||
+        firts7Articles.map((item, _index) => (
+          <a key={_index} href={item.url} target="_blank">
+            <p>{item.title} </p>
+          </a>
+        ))}
     </div>
   );
 }
